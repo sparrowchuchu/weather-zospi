@@ -19,4 +19,8 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 @app.get("/", response_class=HTMLResponse)
 async def read_index(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
-    
+
+  
+# CMD運行指令
+# vicorn app:app --reload
+# uvicorn app:app --host 0.0.0.0 --port 8000 --reload
