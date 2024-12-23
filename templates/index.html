@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/sparrow.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='css/sparrow.css') }}"/>
     <title>Sparrow</title>
 </head>
 <!-- <body onload="alert('Hello');"> -->
@@ -53,9 +53,9 @@
     <!--  -->
     <div class="carousel">
         <div class="slides">
-            <div class="slide center"><img src="img/sparrow/sparrow01.jpg" alt="sparrow01"/></div>
-            <div class="slide center"><img src="img/sparrow/sparrow02.jpg" alt="sparrow02"/></div>
-            <div class="slide center"><img src="img/sparrow/sparrow03.jpg" alt="sparrow03"/></div>
+            <div class="slide center"><img src="{{ url_for('static', path='img/sparrow/sparrow01.jpg') }}" alt="sparrow01"/></div>
+            <div class="slide center"><img src="{{ url_for('static', path='img/sparrow/sparrow02.jpg') }}" alt="sparrow02"/></div>
+            <div class="slide center"><img src="{{ url_for('static', path='img/sparrow/sparrow03.jpg') }}" alt="sparrow03"/></div>
         </div>
         <div class="slides-btns">
             <button class="btn-sr" id="prevBtn">❮</button>
@@ -84,7 +84,7 @@
             </div>
         </div>
     </div>
-    <div class="content">
+    <!-- <div class="content">
         <button class="dropBtn center">
             <span>選擇</span>
             <icon>
@@ -93,11 +93,11 @@
                 </svg>
             </icon>
         </button>
-    </div>
+    </div> -->
     <footer>
         <p>Copyright © Sharon W. 2024</p>
     </footer>
-    <script src ='js/g.js' type='text/javascript'></script>
-    <script src="js/sparrow.js"></script>
+    <script src ="{{ url_for('static', path='js/g.js') }}" type='text/javascript'></script>
+    <script src="{{ url_for('static', path='js/sparrow.js') }}"></script>
 </body>
 </html>
